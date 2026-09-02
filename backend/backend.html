@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Leroy | Backend console</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="backend.css" />
+	</head>
+	<body>
+		<main class="console-shell">
+			<header class="console-header"><div class="brand"><span class="brand-mark">L</span><span>Leroy</span><small>BACKEND CONSOLE</small></div><div class="header-meta"><span class="connection"><i></i> API connected</span><a href="/call.html?room=room-01">Test audio/video ↗</a><a href="/">Open teacher view ↗</a></div></header>
+			<section class="intro"><div><p class="eyebrow">OPERATIONS</p><h1>Classroom control center</h1><p>Monitor the virtual campus and provision new learning rooms.</p></div><button class="refresh-button" id="refresh-button">↻ Refresh data</button></section>
+			<section class="metric-grid" aria-label="System overview"><article class="metric-card"><span>API status</span><strong id="api-status">Checking…</strong><small id="api-service">Connecting to service</small></article><article class="metric-card"><span>Total rooms</span><strong id="room-count">—</strong><small>Across the workspace</small></article><article class="metric-card"><span>Students online</span><strong id="student-count">—</strong><small>In live rooms now</small></article><article class="metric-card accent"><span>Live room</span><strong id="live-room">—</strong><small id="live-subject">No live class</small></article></section>
+			<section class="content-grid"><div class="panel"><div class="panel-heading"><div><p class="eyebrow">ROOM DIRECTORY</p><h2>Learning rooms</h2></div><span class="panel-note" id="last-updated">Not loaded</span></div><div class="table-wrap"><table><thead><tr><th>Room</th><th>Code</th><th>Class</th><th>Status</th><th>Students</th></tr></thead><tbody id="rooms-table"><tr><td colspan="5" class="empty">Loading rooms…</td></tr></tbody></table></div></div><div class="panel create-panel"><div class="panel-heading"><div><p class="eyebrow">PROVISION</p><h2>Create a room</h2></div></div><form id="room-form"><label>Room name<input name="title" required placeholder="e.g. Ocean ecosystems" /></label><label>Year group<input name="year" required placeholder="e.g. Year 8" /></label><label>Subject<input name="subject" required placeholder="e.g. Biology Lab" /></label><label>Description<textarea name="description" rows="3" placeholder="What will students explore?"></textarea></label><button class="primary-button" type="submit">＋ Create scheduled room</button><p class="form-message" id="form-message" role="status"></p></form></div></section>
+			<section class="internship-section"><div class="section-heading"><div><p class="eyebrow">STUDENT SUPPORT</p><h2>Internship check-ins</h2><p>Call students and capture the essentials from every placement conversation.</p></div><span class="check-in-count" id="check-in-count">Loading…</span></div><div class="internship-grid"><div class="panel internship-table-panel"><div class="table-wrap"><table><thead><tr><th>Student</th><th>Placement</th><th>Next call</th><th>Status</th><th></th></tr></thead><tbody id="internships-table"><tr><td colspan="5" class="empty">Loading students…</td></tr></tbody></table></div></div><div class="panel check-in-panel"><div class="panel-heading"><div><p class="eyebrow">CALL NOTES</p><h3>Record a check-in</h3></div></div><form id="check-in-form"><label>Student<select name="studentId" id="student-select" required><option value="">Choose a student</option></select></label><label>Call outcome<select name="status" required><option value="complete">Completed</option><option value="scheduled">Follow-up needed</option><option value="needs-call">Could not reach</option></select></label><label>Next call<input name="nextCall" required placeholder="e.g. Friday, Nov 01" /></label><label>What did you learn?<textarea name="notes" rows="4" required placeholder="Progress, wellbeing, supervisor feedback, or support needed…"></textarea></label><button class="primary-button" type="submit">Save check-in</button><p class="form-message" id="check-in-message" role="status"></p></form></div></div></section>
+			<footer><span>Environment: local development</span><span>Base URL: <code>/api</code></span></footer>
+		</main>
+		<script src="backend.js"></script>
+	</body>
+</html>

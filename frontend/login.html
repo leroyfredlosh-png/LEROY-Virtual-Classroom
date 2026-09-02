@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="theme-color" content="#f4f0e8" />
+		<title>Leroy | Virtual classroom</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<section class="auth-page">
+			<div class="auth-panel">
+				<div class="auth-box">
+					<h2>Create account</h2>
+					<form id="register-form">
+						<input name="fullName" placeholder="Full name" required />
+						<input name="email" type="email" placeholder="Email address" required />
+						<input name="password" type="password" placeholder="Password" required />
+						<button type="submit">Register</button>
+					</form>
+				</div>
+
+				<div class="auth-box">
+					<h2>Login</h2>
+					<form id="login-form">
+						<input name="email" type="email" placeholder="Email address" required />
+						<input name="password" type="password" placeholder="Password" required />
+						<button type="submit">Login</button>
+					</form>
+				</div>
+
+				<div class="auth-box">
+					<h2>Forgot password</h2>
+					<form id="forgot-form">
+						<input name="email" type="email" placeholder="Enter email" required />
+						<button type="submit">Send reset link</button>
+					</form>
+				</div>
+
+				<div class="auth-box">
+					<h2>Reset password</h2>
+					<form id="reset-form">
+						<input name="token" placeholder="Reset token" required />
+						<input name="newPassword" type="password" placeholder="New password" required />
+						<button type="submit">Reset password</button>
+					</form>
+				</div>
+			</div>
+		</section>
+
+		<div class="app-shell">
+			<aside class="sidebar" aria-label="Primary navigation">
+				<div class="brand"><span class="brand-mark">L</span><span>Leroy</span></div>
+				<div class="school-switcher"><span class="school-avatar">RM</span><span><b>Riverside Middle</b><small>Teacher workspace</small></span><button class="icon-button" aria-label="Switch school">⌄</button></div>
+				<nav class="nav-list">
+					<a class="nav-item active" href="#overview"><span class="nav-icon">⌂</span>Overview</a>
+					<a class="nav-item" href="#rooms"><span class="nav-icon">◈</span>My rooms<span class="nav-count">3</span></a>
+					<a class="nav-item" href="#calendar"><span class="nav-icon">□</span>Calendar</a>
+					<a class="nav-item" href="#library"><span class="nav-icon">▤</span>Resource library</a>
+				</nav>
+				<div class="sidebar-bottom">
+					<a class="nav-item" href="#settings"><span class="nav-icon">⚙</span>Settings</a>
+					<div class="profile"><span class="profile-avatar">LF</span><span><b>Leroy-Fred</b><small>Science teacher</small></span><button class="icon-button" aria-label="Open profile menu">•••</button></div>
+				</div>
+			</aside>
+
+			<main class="main-content" id="overview">
+				<header class="topbar"><div class="mobile-brand"><span class="brand-mark">L</span>Leroy</div><div class="breadcrumb">Tuesday, October 24, 2024 <span>•</span> <b>Good morning, Leroy-Fred</b></div><div class="top-actions"><button class="round-button" aria-label="Notifications">♧<i></i></button><button class="help-button">? <span>Help center</span></button></div></header>
+
+				<section class="welcome-row"><div><p class="eyebrow">TEACHER DASHBOARD</p><h1>Your classroom, <em>reimagined.</em></h1><p class="lede">Everything you need to create moments that stick.</p></div><button class="primary-button" id="create-room"><span>＋</span> Create a room</button></section>
+
+				<section class="live-room-panel" id="rooms">
+					<div class="room-visual">
+						<div class="visual-top"><span class="live-pill"><i></i> LIVE NOW</span><span class="room-time">00:34:18</span></div>
+						<div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="planet"><span></span></div><div class="star star-a">✦</div><div class="star star-b">✦</div><div class="star star-c">·</div>
+						<div class="visual-title"><span>ROOM 01</span><h2>Exploring<br /><strong>the cosmos</strong></h2><p>Year 8 · Astronomy Lab</p></div>
+						<button class="enter-room" id="enter-room">Enter room <span>↗</span></button>
+					</div>
+					<div class="room-details"><div class="detail-heading"><div><p class="eyebrow">YOUR LIVE ROOM</p><h3>Exploring the cosmos</h3></div><button class="more-button" aria-label="More room options">•••</button></div><p class="room-description">A guided journey through our solar system. Students are currently discovering what makes a planet habitable.</p><div class="room-stats"><div><strong>18</strong><span>Students here</span></div><div><strong>42<span>m</span></strong><span>Class duration</span></div><div><strong>94<span>%</span></strong><span>Participation</span></div></div><div class="participant-strip"><div class="avatar-stack"><span class="avatar coral">JD</span><span class="avatar blue">MK</span><span class="avatar gold">ER</span><span class="avatar lavender">＋</span></div><span>+15 students are in the room</span></div><div class="room-footer"><span class="status-dot"></span><span>Room is open</span><button class="text-button">Manage room <span>→</span></button></div></div>
+				</section>
+
+				<section class="lower-grid"><div class="section-block" id="calendar"><div class="section-heading"><div><p class="eyebrow">UP NEXT</p><h3>Today’s schedule</h3></div><button class="text-button">View calendar <span>→</span></button></div><div class="schedule-list"><div class="schedule-item current"><time>10:00<br /><span>AM</span></time><span class="schedule-line"></span><div class="schedule-copy"><strong>Exploring the cosmos</strong><span>Year 8 · Astronomy Lab</span></div><span class="current-label">Live now</span></div><div class="schedule-item"><time>01:30<br /><span>PM</span></time><span class="schedule-line"></span><div class="schedule-copy"><strong>Mission: Mars</strong><span>Year 7 · Space sciences</span></div><span class="room-tag">Room 02</span></div><div class="schedule-item"><time>03:45<br /><span>PM</span></time><span class="schedule-line"></span><div class="schedule-copy"><strong>Open studio</strong><span>Year 8 · Independent work</span></div><span class="room-tag">Room 04</span></div></div></div><div class="section-block activity-block"><div class="section-heading"><div><p class="eyebrow">RECENT ACTIVITY</p><h3>Keep the momentum</h3></div><button class="more-button" aria-label="More activity options">•••</button></div><div class="activity-card"><div class="activity-icon">✦</div><div><strong>Solar system quiz</strong><p>Ready to share with Year 8</p></div><button class="circle-arrow" aria-label="Open solar system quiz">↗</button></div><div class="activity-card"><div class="activity-icon peach">▧</div><div><strong>Week 4 resources</strong><p>12 items · Updated yesterday</p></div><button class="circle-arrow" aria-label="Open week 4 resources">↗</button></div></div></section>
+			</main>
+		</div>
+		<div class="toast" id="toast" role="status"></div>
+		<script src="script.js"></script>
+	</body>
+</html>
